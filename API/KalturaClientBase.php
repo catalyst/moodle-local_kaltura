@@ -48,21 +48,21 @@ class MultiRequestSubResult implements ArrayAccess
         return new MultiRequestSubResult($this->value . ':' . $name);
 	}
 
-	public function offsetExists($offset)
+	public function offsetExists(mixed $offset): bool
 	{
 		return true;
 	}
 
-	public function offsetGet($offset)
+	public function offsetGet(mixed $offset): mixed
 	{
         return new MultiRequestSubResult($this->value . ':' . $offset);
 	}
 
-	public function offsetSet($offset, $value)
+	public function offsetSet(mixed $offset, mixed $value): void
 	{
 	}
 
-	public function offsetUnset($offset)
+	public function offsetUnset(mixed $offset): void
 	{
 	}
 }
